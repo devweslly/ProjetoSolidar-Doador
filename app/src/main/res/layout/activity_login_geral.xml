@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/logo_solidar"
+            android:layout_width="300dp"
+            android:layout_height="131dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/soli_dar_"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/entrar_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:hint="@string/email"
+            android:inputType="textWebEmailAddress"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo_solidar"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/senha_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:hint="@string/senha"
+            android:importantForAutofill="no"
+            android:inputType="textAutoComplete"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/entrar_email" />
+
+        <TextView
+            android:id="@+id/esqueceu_senha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/esqueceu_a_senha"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/senha_email" />
+
+        <Button
+            android:id="@+id/botao_entrar"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_margin="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#F40C0C"
+            android:text="@string/entrar"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/esqueceu_senha" />
+
+        <Button
+            android:id="@+id/btnCadDoador"
+            android:layout_width="362dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="160dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/cadastre_se_como_doador"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/botao_entrar"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <!--
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Entrar com:"
+            android:background=""
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botao_entrar" />
+
+        <TextView
+            android:id="@+id/cadastro_doador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Cadastre-se como DOADOR"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botao_entrar" />
+
+        <TextView
+            android:id="@+id/cadastro_ong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastre-se como ONG"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cadastro_doador" />
+        -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

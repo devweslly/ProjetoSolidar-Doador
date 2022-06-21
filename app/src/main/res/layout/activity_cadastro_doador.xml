@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logo_doador"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/logo_doar"
+        android:src="@drawable/do_ar_"
+        app:layout_constraintBottom_toTopOf="@+id/tituloTela"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/tituloTela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_doador">
+
+        <TextView
+            android:id="@+id/titulo_cadastro_doador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/criar_uma_conta"
+            android:textColor="@color/cinzaEscuro"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo_doador" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/cinzaEscuro" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/nome_completo_doador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/nome_completo"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloTela"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/entrar_email_doador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nome_completo_doador" />
+
+    <EditText
+        android:id="@+id/senha_email_doador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/senha"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/entrar_email_doador" />
+
+    <EditText
+        android:id="@+id/repetir_senha_doador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/repetir_senha"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/senha_email_doador"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/termo_condicoes1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/ao_criar_uma_conta_voc_concordar_com_nossos"
+        android:textColor="@color/cinzaEscuro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repetir_senha_doador" />
+
+    <TextView
+        android:id="@+id/termo_condicoes2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/termos_e_condi_es"
+        android:textColor="#F40C0C"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/termo_condicoes1" />
+
+    <Button
+        android:id="@+id/botao_criar_doador"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_margin="20dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#F40C0C"
+        android:text="@string/continuar"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/termo_condicoes2"
+        app:layout_constraintVertical_bias="0.191" />
+
+    <!--
+    <EditText
+        android:id="@+id/entrar_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Entrar com:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/botao_entrar_doador" />
+    -->
+</androidx.constraintlayout.widget.ConstraintLayout>

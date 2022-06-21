@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logo_doador"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/do_ar_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/logo_doar" />
+
+    <LinearLayout
+        android:id="@+id/tituloTela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_doador">
+
+        <TextView
+            android:id="@+id/titulo_cadastro_perfil_doador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/completar_perfil"
+            android:textColor="@color/cinzaEscuro"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo_doador" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/cinzaEscuro" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/cpfCnpj_doador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/cpf_cnpj"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloTela"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/cep_doador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/cep"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cpfCnpj_doador"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/endereco_doador"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/endere_o"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cep_doador"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/numero_doador"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/n_mero"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/endereco_doador"
+        app:layout_constraintTop_toBottomOf="@id/cep_doador"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/bairro_doador"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/bairro"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/endereco_doador"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/cidade_doador"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/cidade"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bairro_doador"
+        app:layout_constraintTop_toBottomOf="@id/endereco_doador"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/botao_criar_doador"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="#F40C0C"
+        android:text="@string/criar_conta"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bairro_doador"
+        app:layout_constraintVertical_bias="0.094" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
