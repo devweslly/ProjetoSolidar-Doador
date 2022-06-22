@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Soli{dar}</string>
+    <string name="app_name">Soli{dar} - Doador</string>
     <string name="cadastre_se_como_doador">Cadastre-se como doador</string>
     <string name="entrar">Entrar</string>
     <string name="esqueceu_a_senha">Esqueceu a senha</string>
@@ -27,4 +27,9 @@
     <string name="nome_do_produto">Nome do Produto</string>
     <string name="imagem_do_produto">Imagem do Produto</string>
     <string name="descri_o_do_produto">Descrição do Produto</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notifica_es">Notificações</string>
+    <string name="editar_perfil">Editar Perfil</string>
+    <string name="salvar_altera_es">Salvar Alterações</string>
 </resources>

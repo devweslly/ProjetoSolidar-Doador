@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.example.projetosolidar.ListFragment"
+        android:name="com.solidar.doador.ListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/cadastroProdutoFragment"
-        android:name="com.example.projetosolidar.CadastroProdutoFragment"
+        android:name="com.solidar.doador.CadastroProdutoFragment"
         android:label="fragment_cadastro_produto"
         tools:layout="@layout/fragment_cadastro_produto" >
         <action
@@ -25,4 +25,14 @@
             app:popUpTo="@id/listFragment"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/editarPerfilFragment"
+        android:name="com.solidar.doador.EditarPerfilFragment"
+        android:label="fragment_editar_perfil"
+        tools:layout="@layout/fragment_editar_perfil" />
+    <fragment
+        android:id="@+id/notificacoesFragment"
+        android:name="com.solidar.doador.NotificacoesFragment"
+        android:label="fragment_notificacoes"
+        tools:layout="@layout/fragment_notificacoes" />
 </navigation>
