@@ -74,17 +74,18 @@
             android:id="@+id/btnCadDoador"
             android:layout_width="362dp"
             android:layout_height="54dp"
-            android:layout_marginTop="160dp"
-            android:backgroundTint="@color/white"
+            android:layout_marginBottom="32dp"
+            android:background="@null"
+            android:backgroundTint="@null"
             android:text="@string/cadastre_se_como_doador"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/cinzaEscuro"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/botao_entrar"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
         <!--

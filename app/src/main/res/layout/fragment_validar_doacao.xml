@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -29,7 +29,8 @@
                 android:src="@drawable/confirmacao_doacao"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
 
             <TextView
                 android:id="@+id/text_validar01"
@@ -37,21 +38,22 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="16dp"
-                android:text="Validar Doação"
-                android:textColor="#000000"
+                android:text="@string/validar_doa_o"
+                android:textColor="@color/black"
                 android:textSize="35sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/image_validacao" />
+                app:layout_constraintTop_toBottomOf="@id/image_validacao"
+                />
 
             <TextView
                 android:id="@+id/text_validar02"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:text="Para validar a retirada da sua doação, insira abaixo o código informado pela ONG:"
-                android:textColor="#000000"
+                android:text="@string/para_validar_a_retirada_da_sua_doa_o_insira_abaixo_o_c_digo_informado_pela_ong"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -63,20 +65,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
-                android:hint="Código da doação"
+                android:hint="@string/c_digo_da_doa_o"
+                android:inputType="text"
+                android:minHeight="48dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_validar02" />
+                app:layout_constraintTop_toBottomOf="@id/text_validar02"
+                tools:ignore="TextContrastCheck" />
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="54dp"
                 android:layout_margin="16dp"
                 android:backgroundTint="#F40C0C"
-                android:text="Validar Retirada"
+                android:text="@string/validar_retirada"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_validar03" />
+                app:layout_constraintTop_toBottomOf="@id/text_validar03"
+                tools:ignore="TextContrastCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

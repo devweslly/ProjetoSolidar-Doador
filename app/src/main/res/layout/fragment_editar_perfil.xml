@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:text="@string/editar_perfil"
             android:textColor="@color/cinzaEscuro"
-            android:textSize="30sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/logo_doador" />
@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="4dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="14dp"
             android:background="@color/cinzaEscuro" />
 
     </LinearLayout>
@@ -167,18 +167,45 @@
             android:inputType="text"/>
     </LinearLayout>
 
-
-    <Button
-        android:id="@+id/botao_criar_doador"
+    <LinearLayout
+        android:id="@+id/rowButtons"
         android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:layout_margin="20dp"
-        android:backgroundTint="#F40C0C"
-        android:text="@string/salvar_altera_es"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rowBaiCid" />
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="20dp">
+
+        <Button
+            android:id="@+id/botao_criar_doador"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_marginVertical="10dp"
+            android:backgroundTint="#F40C0C"
+            android:text="@string/salvar_altera_es"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rowBaiCid" />
+
+        <Button
+            android:id="@+id/botao_sair"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="20dp"
+            android:backgroundTint="#F40C0C"
+            android:text="@string/Sair"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rowBaiCid"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

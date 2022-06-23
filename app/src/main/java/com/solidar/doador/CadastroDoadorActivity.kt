@@ -17,12 +17,12 @@ class CadastroDoadorActivity : AppCompatActivity() {
         // Ação de click
         botaoTelaCadastDoador.setOnClickListener {
             // chamada do metodo
-            irTelaCadastroPerfil()
+            irMainActivity()
         }
     }
 
-    private fun irTelaCadastroPerfil(){
-        val telaCadasPerfilDoador = Intent(this, CadastroPerfilDoadorActivity::class.java)
-        startActivity(telaCadasPerfilDoador)
+    private fun irMainActivity(){
+        val telaInicio = Intent(this, MainActivity::class.java)
+        startActivity(telaInicio)
     }
 }

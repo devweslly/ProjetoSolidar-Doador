@@ -35,4 +35,9 @@
         android:name="com.solidar.doador.NotificacoesFragment"
         android:label="fragment_notificacoes"
         tools:layout="@layout/fragment_notificacoes" />
+    <fragment
+        android:id="@+id/validarDoacaoFragment"
+        android:name="com.solidar.doador.ValidarDoacaoFragment"
+        android:label="fragment_validar_doacao"
+        tools:layout="@layout/fragment_validar_doacao" />
 </navigation>

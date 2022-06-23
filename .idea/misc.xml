@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar-Doador/app/src/main/res/layout/activity_cadastro_doador.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar-Doador/app/src/main/res/layout/activity_cadastro_perfil_doador.xml" value="0.13768115942028986" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar-Doador/app/src/main/res/layout/activity_login_geral.xml" value="0.17" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar-Doador/app/src/main/res/layout/activity_main.xml" value="0.18115942028985507" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar-Doador/app/src/main/res/layout/activity_validar_doacao_doador.xml" value="0.18614130434782608" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar-Doador/app/src/main/res/layout/fragment_editar_perfil.xml" value="0.25" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar-Doador/app/src/main/res/layout/fragment_validar_doacao.xml" value="0.18614130434782608" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar-Doador/app/src/main/res/menu/menu_inferior.xml" value="0.2" />
         <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar-Doador/app/src/main/res/layout/activity_cadastro_doador.xml" value="0.17119565217391305" />
         <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar-Doador/app/src/main/res/layout/activity_cadastro_perfil_doador.xml" value="0.17119565217391305" />
         <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar-Doador/app/src/main/res/layout/activity_editar_perfil_doador.xml" value="0.17119565217391305" />
