@@ -10,9 +10,11 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.solidar.doador.R
 import com.solidar.doador.adapter.ProdutoAdapter
+import com.solidar.doador.adapter.ProdutoClickListener
 import com.solidar.doador.databinding.FragmentListBinding
+import com.solidar.doador.model.Produto
 
-class ListFragment : Fragment() {
+class ListFragment : Fragment(), ProdutoClickListener {
 
     private lateinit var binding: FragmentListBinding
     private val mainViewModel: MainViewModel by activityViewModels()
@@ -27,7 +29,7 @@ class ListFragment : Fragment() {
         mainViewModel.listarProduto()
 
         // Configuração do Recycler View
-        val adapter = ProdutoAdapter()
+        val adapter = ProdutoAdapter(this, mainViewModel)
         binding.recyclerProduto.layoutManager = LinearLayoutManager(context)
         binding.recyclerProduto.adapter = adapter
         binding.recyclerProduto.setHasFixedSize(true)
@@ -44,5 +46,10 @@ class ListFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onProdutoClickListener(produto: Produto) {
+        mainViewModel.produtoSelecionado = produto
+        findNavController().navigate(R.id.action_listFragment_to_editarProdutoFragment)
     }
 }

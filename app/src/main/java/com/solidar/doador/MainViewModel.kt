@@ -19,6 +19,8 @@ class MainViewModel @Inject constructor(
   private val repository : Repository
 ): ViewModel()  {
 
+    var produtoSelecionado: Produto? = null
+
     // mutable list de categorias que recebemos da api (inacessivel)
     private val _categoriaResponse =
         MutableLiveData<Response<List<Categoria>>>()
@@ -61,6 +63,17 @@ class MainViewModel @Inject constructor(
             try{
                 val response = repository.listarProduto()
                 _produtoResponse.value = response
+            }catch (e: Exception){
+                Log.d("ERRO", e.message.toString())
+            }
+        }
+    }
+
+    fun updateProduto(produto: Produto){
+        viewModelScope.launch {
+            try {
+                repository.updateProduto(produto)
+                listarProduto()
             }catch (e: Exception){
                 Log.d("ERRO", e.message.toString())
             }

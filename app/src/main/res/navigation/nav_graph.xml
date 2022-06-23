@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_listFragment_to_cadastroProdutoFragment"
             app:destination="@id/cadastroProdutoFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_editarProdutoFragment"
+            app:destination="@id/editarProdutoFragment" />
     </fragment>
     <fragment
         android:id="@+id/cadastroProdutoFragment"
@@ -40,4 +43,15 @@
         android:name="com.solidar.doador.ValidarDoacaoFragment"
         android:label="fragment_validar_doacao"
         tools:layout="@layout/fragment_validar_doacao" />
+    <fragment
+        android:id="@+id/editarProdutoFragment"
+        android:name="com.solidar.doador.EditarProdutoFragment"
+        android:label="fragment_editar_produto"
+        tools:layout="@layout/fragment_editar_produto" >
+        <action
+            android:id="@+id/action_editarProdutoFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@id/listFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

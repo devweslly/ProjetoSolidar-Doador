@@ -3,10 +3,14 @@ package com.solidar.doador.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.solidar.doador.MainViewModel
 import com.solidar.doador.databinding.CardLayoutBinding
 import com.solidar.doador.model.Produto
 
-class ProdutoAdapter : RecyclerView.Adapter<ProdutoAdapter.ProdutoViewHolder>() {
+class ProdutoAdapter (
+    val produtoClickListener: ProdutoClickListener,
+    val mainViewModel: MainViewModel
+        ) : RecyclerView.Adapter<ProdutoAdapter.ProdutoViewHolder>() {
 
     private var listProduto = emptyList<Produto>()
 
@@ -29,6 +33,11 @@ class ProdutoAdapter : RecyclerView.Adapter<ProdutoAdapter.ProdutoViewHolder>() 
         holder.binding.nomeProdutoCardView.text = produto.nomeMarca
         holder.binding.categoriaProdutoCardView.text = "Categoria: " + produto.categoria.descricao
         holder.binding.quantidadeCardView.text = "Quantidade: " + produto.quantidade.toString()
+
+        holder.itemView.setOnClickListener {
+            produtoClickListener.onProdutoClickListener(produto)
+        }
+
     }
 
     override fun getItemCount(): Int {
@@ -36,7 +45,7 @@ class ProdutoAdapter : RecyclerView.Adapter<ProdutoAdapter.ProdutoViewHolder>() 
     }
 
     fun setList(list: List<Produto>) {
-        listProduto = list
+        listProduto = list.sortedByDescending { it.id }
         notifyDataSetChanged()
     }
 }

@@ -37,4 +37,5 @@
     <string name="c_digo_da_doa_o">Código da doação</string>
     <string name="para_validar_a_retirada_da_sua_doa_o_insira_abaixo_o_c_digo_informado_pela_ong">Para validar a retirada da sua doação, insira abaixo o código informado pela ONG:</string>
     <string name="validar_doa_o">Validar Doação</string>
+    <string name="editar_produto">Editar Produto</string>
 </resources>
