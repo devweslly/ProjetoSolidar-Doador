@@ -1,14 +1,16 @@
 package com.solidar.doador
 
+import android.app.Application
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.solidar.doador.api.Repository
+import com.solidar.doador.data.Usuario
+import com.solidar.doador.data.UsuarioDatabase
+import com.solidar.doador.data.UsuarioRepository
 import com.solidar.doador.model.Categoria
 import com.solidar.doador.model.Produto
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Response
 import javax.inject.Inject
@@ -16,8 +18,8 @@ import kotlin.Exception
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-  private val repository : Repository
-): ViewModel()  {
+    private val repository: Repository
+) : ViewModel() {
 
     var produtoSelecionado: Produto? = null
 
@@ -26,14 +28,14 @@ class MainViewModel @Inject constructor(
         MutableLiveData<Response<List<Categoria>>>()
 
     // criamos uma lista imutável a partir da mutable list anterior (acessivel)
-    val categoriaResponse : LiveData<Response<List<Categoria>>> = _categoriaResponse
+    val categoriaResponse: LiveData<Response<List<Categoria>>> = _categoriaResponse
 
     private val _produtoResponse = MutableLiveData<Response<List<Produto>>>()
 
-    val produtoResponse : LiveData<Response<List<Produto>>> = _produtoResponse
+    val produtoResponse: LiveData<Response<List<Produto>>> = _produtoResponse
 
 
-    fun listarCategoria(){
+    fun listarCategoria() {
         // criar a corrotina
         viewModelScope.launch {
             try {
@@ -41,7 +43,7 @@ class MainViewModel @Inject constructor(
                 val response = repository.listarCategoria()
                 // atribuimos essa resposta ao mutableLiveData de _categoriaResponse
                 _categoriaResponse.value = response
-            } catch (e:Exception){
+            } catch (e: Exception) {
                 // criar logcat caso dê erro
                 Log.d("Erro", e.message.toString())
             }
@@ -49,36 +51,41 @@ class MainViewModel @Inject constructor(
         }
     }
 
-    fun addProduto(produto: Produto){
+    fun addProduto(produto: Produto) {
         viewModelScope.launch {
             try {
                 repository.addProduto(produto)
-            }catch (e: Exception){
-                Log.d("ERRO", e.message.toString())
-            }
-        }
-    }
-    fun listarProduto(){
-        viewModelScope.launch {
-            try{
-                val response = repository.listarProduto()
-                _produtoResponse.value = response
-            }catch (e: Exception){
+            } catch (e: Exception) {
                 Log.d("ERRO", e.message.toString())
             }
         }
     }
 
-    fun updateProduto(produto: Produto){
+    fun listarProduto() {
+        viewModelScope.launch {
+            try {
+                val response = repository.listarProduto()
+                _produtoResponse.value = response
+            } catch (e: Exception) {
+                Log.d("ERRO", e.message.toString())
+            }
+        }
+    }
+
+    fun updateProduto(produto: Produto) {
         viewModelScope.launch {
             try {
                 repository.updateProduto(produto)
                 listarProduto()
-            }catch (e: Exception){
+            } catch (e: Exception) {
                 Log.d("ERRO", e.message.toString())
             }
         }
+
+
     }
 
-
 }
+
+
+
