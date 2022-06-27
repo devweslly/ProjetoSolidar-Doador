@@ -1,7 +1,9 @@
 package com.solidar.doador
 
 import android.app.Application
+import android.content.Context
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.*
 import com.solidar.doador.api.Repository
 import com.solidar.doador.data.Usuario
@@ -33,7 +35,6 @@ class MainViewModel @Inject constructor(
     private val _produtoResponse = MutableLiveData<Response<List<Produto>>>()
 
     val produtoResponse: LiveData<Response<List<Produto>>> = _produtoResponse
-
 
     fun listarCategoria() {
         // criar a corrotina
@@ -81,8 +82,17 @@ class MainViewModel @Inject constructor(
                 Log.d("ERRO", e.message.toString())
             }
         }
+    }
 
-
+    fun deleteProduto(id:Long){
+        viewModelScope.launch {
+            try {
+                repository.deleteProduto(id)
+                listarProduto()
+            } catch (e: Exception){
+                Log.d("ERRO", e.message.toString())
+            }
+        }
     }
 
 }

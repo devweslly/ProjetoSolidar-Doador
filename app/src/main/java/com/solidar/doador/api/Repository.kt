@@ -22,4 +22,8 @@ class Repository {
         return RetrofitInstance.api.updateProduto(produto)
     }
 
+    suspend fun deleteProduto(id:Long) : Response<Produto>{
+        return RetrofitInstance.api.deleteProduto(id)
+    }
+
 }

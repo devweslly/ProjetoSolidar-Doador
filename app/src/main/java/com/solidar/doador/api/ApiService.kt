@@ -3,10 +3,7 @@ package com.solidar.doador.api
 import com.solidar.doador.model.Categoria
 import com.solidar.doador.model.Produto
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.PUT
+import retrofit2.http.*
 
 interface ApiService {
 
@@ -26,4 +23,11 @@ interface ApiService {
     suspend fun updateProduto(
         @Body produto: Produto
     ): Response <Produto>
+
+    @DELETE("produtos/{id}")
+    suspend fun deleteProduto(
+        @Path("id") id:Long
+    ) : Response<Produto>
+
+
 }

@@ -19,17 +19,16 @@ import retrofit2.Response
 class UsuarioViewModel(application: Application) : AndroidViewModel(application) {
 
 
-    val selectUsuario: LiveData<List<Usuario>>
+    //val selectUsuario: LiveData<List<Usuario>>
     val usuarioRepository: UsuarioRepository
 
     init {
         val usuarioDao = UsuarioDatabase.getDatabase(application).usuarioDao()
         usuarioRepository = UsuarioRepository(usuarioDao)
 
-        selectUsuario = usuarioRepository.selectUsuario
+        //selectUsuario = usuarioRepository.selectUsuario()
 
     }
-
 
     fun addUsuario(usuario: Usuario) {
         viewModelScope.launch(Dispatchers.IO) {
@@ -40,6 +39,7 @@ class UsuarioViewModel(application: Application) : AndroidViewModel(application)
             }
         }
     }
+
 }
 
 

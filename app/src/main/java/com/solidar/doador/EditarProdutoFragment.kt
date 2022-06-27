@@ -1,5 +1,6 @@
 package com.solidar.doador
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -37,12 +38,15 @@ class EditarProdutoFragment : Fragment() {
 
         mainViewModel.categoriaResponse.observe(viewLifecycleOwner) {
             Log.d("Requisicao", it.body().toString())
-
             spinnercategoria(it.body())
         }
 
         binding.buttonEditarProduto.setOnClickListener {
             editarProduto()
+        }
+
+        binding.buttonDeletarProduto.setOnClickListener {
+            showAlertDialog(produtoSelecionado?.id!!)
         }
 
         return binding.root
@@ -101,10 +105,10 @@ class EditarProdutoFragment : Fragment() {
         if (validarCampos(nomeMarca, imagem, descricao, quantidade)) {
             val produto = Produto(produtoSelecionado?.id!!, nomeMarca, imagem, descricao, quantidade, valor, categoria)
             mainViewModel.updateProduto(produto)
-            Toast.makeText(context, "Produto Atualizado", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Produto Atualizado", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_editarProdutoFragment_to_listFragment)
         } else {
-            Toast.makeText(context, "Verifique os Campos", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Verifique os Campos", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -115,6 +119,20 @@ class EditarProdutoFragment : Fragment() {
         binding.imagemProduto.setText(produtoSelecionado?.imagem)
         binding.descricaoProduto.setText(produtoSelecionado?.descricao)
         binding.quantidadeProduto.setText(produtoSelecionado?.quantidade.toString())
+    }
+
+    private fun showAlertDialog(id: Long){
+        AlertDialog.Builder(context)
+            .setTitle("Excluir Produto")
+            .setMessage("Deseja excluir o produto?")
+            .setPositiveButton("Sim"){
+                _,_ -> mainViewModel.deleteProduto(id)
+                Toast.makeText(context, "Produto deletado com sucesso!", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.action_editarProdutoFragment_to_listFragment)
+            }
+            .setNegativeButton("Não"){
+                _,_ ->
+            }.show()
     }
 
 }

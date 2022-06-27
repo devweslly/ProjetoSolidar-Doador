@@ -10,6 +10,7 @@ import androidx.room.Query
 interface UsuarioDao {
     @Insert()
     fun addUsuario(usuario: Usuario)
-@Query("select * From tabela_usuarios Where email = email")
-    fun selectUsuario(): LiveData<List<Usuario>>
+
+    @Query("select * From tabela_usuarios Where email = :email")
+    fun selectUsuario(email:String): LiveData<List<Usuario>>
 }

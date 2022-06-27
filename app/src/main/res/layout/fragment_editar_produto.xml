@@ -36,7 +36,6 @@
 
     </LinearLayout>
 
-
     <EditText
         android:id="@+id/nome_produto"
         android:layout_width="match_parent"
@@ -84,7 +83,6 @@
         app:layout_constraintTop_toBottomOf="@id/descricao_produto"
         tools:ignore="TextContrastCheck" />
 
-
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"
@@ -94,16 +92,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/quantidade_produto" />
 
-    <Button
-        android:id="@+id/button_editar_produto"
+    <LinearLayout
+        android:id="@+id/buttons"
         android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:layout_margin="16dp"
-        android:backgroundTint="#F40C0C"
-        android:text="@string/salvar_altera_es"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/spinner">
+
+        <Button
+            android:id="@+id/button_editar_produto"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_marginVertical="10dp"
+            android:backgroundTint="#F40C0C"
+            android:text="@string/salvar_altera_es"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/button_deletar_produto"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="20dp"
+            android:backgroundTint="#F40C0C"
+            android:text="@string/deletar_produto"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
