@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/tituloTela"
@@ -33,6 +33,104 @@
             android:layout_marginTop="18dp"
             android:background="@color/cinzaEscuro" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notific1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#B5F40C0C"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloTela">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_baseline_notifications_active_24"
+            android:drawablePadding="20dp"
+            android:text="Nova doação! A ONG Esperança acaba de adquirir o seu produto: Café. Fique atento ao prazo de retirada em sua residência."
+            android:textColor="@color/white"
+            app:drawableTint="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notific2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#73D9D9D9"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notific1">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_baseline_notifications_active_24"
+            android:drawablePadding="20dp"
+            android:text="Nova doação! A ONG Esperança acaba de adquirir o seu produto: Café. Fique atento ao prazo de retirada em sua residência."
+            android:textColor="@color/cinzaEscuro"
+            app:drawableTint="@color/cinzaEscuro" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notific3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#B5F40C0C"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notific2">
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_baseline_notifications_active_24"
+            android:drawablePadding="20dp"
+            android:text="Nova doação! A ONG Esperança acaba de adquirir o seu produto: Café. Fique atento ao prazo de retirada em sua residência."
+            android:textColor="@color/white"
+            app:drawableTint="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notific4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#73D9D9D9"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notific3">
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_baseline_notifications_active_24"
+            android:drawablePadding="20dp"
+            android:text="Nova doação! A ONG Esperança acaba de adquirir o seu produto: Café. Fique atento ao prazo de retirada em sua residência."
+            android:textColor="@color/cinzaEscuro"
+            app:drawableTint="@color/cinzaEscuro" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
